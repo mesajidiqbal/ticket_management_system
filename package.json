@@ -1,0 +1,44 @@
+{
+  "name": "ticket_management_system",
+  "version": "1.0.0",
+  "description": "A system for ticket management",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mesajidiqbal/ticket_management_system.git"
+  },
+  "keywords": [
+    "Ticketing",
+    "Booking",
+    "\"Ticket",
+    "Booking\"",
+    "\"Ticket",
+    "Management\""
+  ],
+  "author": "Sajid Iqbal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mesajidiqbal/ticket_management_system/issues"
+  },
+  "homepage": "https://github.com/mesajidiqbal/ticket_management_system#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.9.6",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.11",
+    "nodemon": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0"
+  }
+}
