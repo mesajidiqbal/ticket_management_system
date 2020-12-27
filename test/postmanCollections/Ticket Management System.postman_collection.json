@@ -1,0 +1,712 @@
+{
+  "info": {
+    "_postman_id": "4e63f38a-5af2-47bb-bc7b-b0c41f3313e6",
+    "name": "Ticket Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ping",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "seatNo",
+              "value": "1",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "travelDate",
+              "value": "2020-05-01",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "ticketStatus",
+              "value": "open",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "passengerName",
+              "value": "samplePerson",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "age",
+              "value": "40",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "phone",
+              "value": "9999999999",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "email",
+              "value": "sample@test.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "user",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://{{root}}/",
+          "protocol": "http",
+          "host": [
+            "{{root}}"
+          ],
+          "path": [
+            ""
+          ]
+        },
+        "description": "Ping the App"
+      },
+      "response": []
+    },
+    {
+      "name": "Open (Cancels) the Ticket for given Date and Seat No",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "seatNo",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "travelDate",
+              "value": "2020-05-01",
+              "type": "text"
+            },
+            {
+              "key": "ticketStatus",
+              "value": "open",
+              "type": "text"
+            },
+            {
+              "key": "passengerName",
+              "value": "samplePerson",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "age",
+              "value": "40",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "phone",
+              "value": "9999999999",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "email",
+              "value": "sample@test.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "user",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://{{root}}/updateTicketStatus",
+          "protocol": "http",
+          "host": [
+            "{{root}}"
+          ],
+          "path": [
+            "updateTicketStatus"
+          ]
+        },
+        "description": "Takes travel date, seat number and ticket status as open in input to cancel a booked ticket for given date and seat number"
+      },
+      "response": []
+    },
+    {
+      "name": "Close (Book) Ticket for a given Date and Seat No",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "seatNo",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "travelDate",
+              "value": "2020-05-01",
+              "type": "text"
+            },
+            {
+              "key": "ticketStatus",
+              "value": "close",
+              "type": "text"
+            },
+            {
+              "key": "passengerName",
+              "value": "samplePerson",
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": "40",
+              "type": "text"
+            },
+            {
+              "key": "phone",
+              "value": "9999999999",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "sample@test.com",
+              "type": "text"
+            },
+            {
+              "key": "user",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://{{root}}/updateTicketStatus",
+          "protocol": "http",
+          "host": [
+            "{{root}}"
+          ],
+          "path": [
+            "updateTicketStatus"
+          ]
+        },
+        "description": "Takes travel date, seat number, ticket status as close, passenger name, age, phone number and email in input to (book) a ticket for given date and seat number"
+      },
+      "response": []
+    },
+    {
+      "name": "View all Open (Unbooked) Tickets for a given Date",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "seatNo",
+              "value": "1",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "travelDate",
+              "value": "2020-05-01",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "ticketStatus",
+              "value": "open",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "passengerName",
+              "value": "samplePerson",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "age",
+              "value": "40",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "phone",
+              "value": "9999999999",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "email",
+              "value": "sample@test.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "user",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://{{root}}/viewTickets/2020-05-01/open",
+          "protocol": "http",
+          "host": [
+            "{{root}}"
+          ],
+          "path": [
+            "viewTickets",
+            "2020-05-01",
+            "open"
+          ]
+        },
+        "description": "Takes travel date and ticket status as 'open' in url as shown below: /viewTickets/:travelDate/:ticketStatus"
+      },
+      "response": []
+    },
+    {
+      "name": "View all Closed (Booked) Tickets for the given Date",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "seatNo",
+              "value": "1",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "travelDate",
+              "value": "2020-05-01",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "ticketStatus",
+              "value": "close",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "passengerName",
+              "value": "samplePerson",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "age",
+              "value": "40",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "phone",
+              "value": "9999999999",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "email",
+              "value": "sample@test.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "user",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://{{root}}/viewTickets/2020-05-01/close",
+          "protocol": "http",
+          "host": [
+            "{{root}}"
+          ],
+          "path": [
+            "viewTickets",
+            "2020-05-01",
+            "close"
+          ]
+        },
+        "description": "Takes travel date and ticket status as 'close' in url as shown below: /viewTickets/:travelDate/:ticketStatus"
+      },
+      "response": []
+    },
+    {
+      "name": "View Ticket Status for a given Date and Seat No",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "seatNo",
+              "value": "1",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "travelDate",
+              "value": "2020-05-01",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "ticketStatus",
+              "value": "open",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "passengerName",
+              "value": "samplePerson",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "age",
+              "value": "40",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "phone",
+              "value": "9999999999",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "email",
+              "value": "sample@test.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "user",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://{{root}}/viewTicketStatus/2020-05-01/1",
+          "protocol": "http",
+          "host": [
+            "{{root}}"
+          ],
+          "path": [
+            "viewTicketStatus",
+            "2020-05-01",
+            "1"
+          ]
+        },
+        "description": "Takes travel date and seat number in url as shown below: /viewTicketStatus/:travelDate/:seatNo"
+      },
+      "response": []
+    },
+    {
+      "name": "Reset All Tickets for given Date (Non Admin)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "seatNo",
+              "value": "1",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "travelDate",
+              "value": "2020-05-01",
+              "type": "text"
+            },
+            {
+              "key": "ticketStatus",
+              "value": "open",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "passengerName",
+              "value": "samplePerson",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "age",
+              "value": "40",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "phone",
+              "value": "9999999999",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "email",
+              "value": "sample@test.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "user",
+              "value": "xyz",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://{{root}}/adminReset",
+          "protocol": "http",
+          "host": [
+            "{{root}}"
+          ],
+          "path": [
+            "adminReset"
+          ]
+        },
+        "description": "Additional API for admin to reset the server (opens up all the tickets)\nTakes username, password and travel date as input to reset the ticket for a particular date"
+      },
+      "response": []
+    },
+    {
+      "name": "Reset All Tickets for given Date (Admin-NoDateProvided)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "seatNo",
+              "value": "1",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "travelDate",
+              "value": "2020-05-01",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "ticketStatus",
+              "value": "open",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "passengerName",
+              "value": "samplePerson",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "age",
+              "value": "40",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "phone",
+              "value": "9999999999",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "email",
+              "value": "sample@test.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "user",
+              "value": "admin",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://{{root}}/adminReset",
+          "protocol": "http",
+          "host": [
+            "{{root}}"
+          ],
+          "path": [
+            "adminReset"
+          ]
+        },
+        "description": "Additional API for admin to reset the server (opens up all the tickets)\nTakes username, password and travel date as input to reset the ticket for a particular date"
+      },
+      "response": []
+    },
+    {
+      "name": "Reset All Tickets for given Date (Admin)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "seatNo",
+              "value": "1",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "travelDate",
+              "value": "2020-05-01",
+              "type": "text"
+            },
+            {
+              "key": "ticketStatus",
+              "value": "open",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "passengerName",
+              "value": "samplePerson",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "age",
+              "value": "40",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "phone",
+              "value": "9999999999",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "email",
+              "value": "sample@test.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "user",
+              "value": "admin",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://{{root}}/adminReset",
+          "protocol": "http",
+          "host": [
+            "{{root}}"
+          ],
+          "path": [
+            "adminReset"
+          ]
+        },
+        "description": "Additional API for admin to reset the server (opens up all the tickets)\nTakes username, password and travel date as input to reset the ticket for a particular date"
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
